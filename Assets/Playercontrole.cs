@@ -7,12 +7,24 @@ public class Playercontrole : MonoBehaviour
 {
     public Camera cam;
     public NavMeshAgent agent;
+
+    GameObject torre;
+    Vector3 posinicial;
+
     void Start()
     {
-        
+        torre = GameObject.FindGameObjectWithTag("torre");
+        posinicial = transform.position;
     }
 
-    // Update is called once per frame
+
+    void Algo()
+    {
+        Vector3 target = posinicial;
+
+        
+
+    }
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
