@@ -9,24 +9,18 @@ public class Playercontrole : MonoBehaviour
     public NavMeshAgent agent;
 
     GameObject torre;
-    Vector3 posinicial;
+  Vector3 posinicial;
 
     void Start()
     {
+        //agent.SetDestination(GameObject.Find("base").transform.position);
         torre = GameObject.FindGameObjectWithTag("torre");
         posinicial = transform.position;
     }
 
-
-    void Algo()
-    {
-        Vector3 target = posinicial;
-
-        
-
-    }
     void Update()
     {
+        
         if(Input.GetMouseButtonDown(0))
         {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
