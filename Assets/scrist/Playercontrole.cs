@@ -13,8 +13,8 @@ public class Playercontrole : MonoBehaviour
 
     void Start()
     {
-        //agent.SetDestination(GameObject.Find("base").transform.position);
-        torre = GameObject.FindGameObjectWithTag("torre");
+        agent.SetDestination(GameObject.Find("base").transform.position);
+       /* torre = GameObject.FindGameObjectWithTag("torre");
         posinicial = transform.position;
     }
 
@@ -30,5 +30,6 @@ public class Playercontrole : MonoBehaviour
                 agent.SetDestination(hit.point);
             }
         }
-    }
+    }*/
+}
 }

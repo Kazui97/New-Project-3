@@ -24,6 +24,7 @@ public class Torreta : MonoBehaviour
     {
         lasbalas = Instantiate(bala , canon.GetComponent<Transform>().position,Quaternion.identity);
         lasbalas.transform.parent = null;
+        lasbalas.GetComponent<bala>().direccion = transform.forward;
         lasbalas.name = "balasprueba";
         Destroy(lasbalas,1.5f);
 
