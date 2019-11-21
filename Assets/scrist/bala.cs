@@ -12,7 +12,7 @@ public class bala : MonoBehaviour
     }
    void Start()
     {
-        rigi.AddRelativeForce(direccion*15,ForceMode.Impulse);
+        rigi.AddRelativeForce(direccion*10,ForceMode.Impulse);
     }
 
     public void OnCollisionEnter(Collision col)

@@ -9,11 +9,12 @@ public class Playercontrole : MonoBehaviour
     public NavMeshAgent agent;
 
     GameObject torre;
-  Vector3 posinicial;
+    Vector3 posinicial;
 
     void Start()
     {
-        agent.SetDestination(GameObject.Find("base").transform.position);
+        agent.destination = (GameObject.Find("base").transform.position);
+       // agent.SetDestination(GameObject.Find("base").transform.position);
        /* torre = GameObject.FindGameObjectWithTag("torre");
         posinicial = transform.position;
     }
