@@ -57,7 +57,8 @@ public class Torreta : MonoBehaviour
         }
     }
     void Update()
-    {     
+    {
+        Enemigoenlamira();     
     }
     private void OnDrawGizmos()
     {
