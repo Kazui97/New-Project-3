@@ -19,14 +19,7 @@ public class EnemyG : MonoBehaviour
          enemigotemp = Instantiate(enemigoesqueleto, transform.position, Quaternion.identity);
 
     }
-
-    private void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.GetComponent<bala>())
-        {
-            Destroy(enemigotemp);
-        }
-    }
+ 
     void Update()
     {
         

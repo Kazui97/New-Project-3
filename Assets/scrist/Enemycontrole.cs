@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Playercontrole : MonoBehaviour
+public class Enemycontrole : MonoBehaviour
 {
     public Camera cam;
     public NavMeshAgent agent;
@@ -32,5 +32,12 @@ public class Playercontrole : MonoBehaviour
             }
         }
     }*/
-}
+    }
+     void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.GetComponent<bala>())
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

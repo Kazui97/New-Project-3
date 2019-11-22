@@ -17,10 +17,10 @@ public class bala : MonoBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-       /*if (col.gameObject.GetComponent<enemigo>() )
+       if (col.gameObject.GetComponent<Enemycontrole>() )
         {
             Destroy(this.gameObject);
-        }*/
+        }
     }
     void Update()
     {
