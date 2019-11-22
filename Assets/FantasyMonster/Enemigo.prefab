@@ -1122,7 +1122,7 @@ GameObject:
   - component: {fileID: 5570567569435765586}
   - component: {fileID: 5570567569435765587}
   m_Layer: 0
-  m_Name: Skeleton@Skin
+  m_Name: Enemigo
   m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1137,7 +1137,7 @@ Transform:
   m_GameObject: {fileID: 5570567569822803701}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 56.62, y: 29.51211, z: 21.43}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 5570567569823169179}
   - {fileID: 5570567569823169233}
@@ -1216,7 +1216,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5570567569822803701}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.05
   m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50

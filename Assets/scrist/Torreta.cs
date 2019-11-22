@@ -9,15 +9,15 @@ public class Torreta : MonoBehaviour
     GameObject lasbalas;
     public Transform objetivo;
     public float vision;
-    GameObject enemigo;
     Vector3 posinicial;
    
 
     void Start()
     {
-        enemigo = GameObject.FindGameObjectWithTag("Enemigo");
+        //enemigo = GameObject.FindGameObjectWithTag("Enemigo");
         posinicial = transform.position;
         InvokeRepeating("Disparo", 0.1f, 0.1f);
+        Enemigoenlamira();
         
     }
     void Lasbalas()
@@ -31,16 +31,31 @@ public class Torreta : MonoBehaviour
 
     void Disparo()
     {
-        Vector3 target = posinicial;
+        transform.LookAt(objetivo);
+        if (Vector3.Distance(transform.position, objetivo.position)<=vision){
+            Enemigoenlamira();
+            Lasbalas();
+        }
+       /* * Vector3 target = posinicial;
         float dist = Vector3.Distance(enemigo.transform.position, transform.position);
         if (dist < vision)
         {
             transform.LookAt(objetivo);
             Lasbalas();
             Debug.Log("en la mira");
+        }*/
+    }
+    void Enemigoenlamira()
+    {
+        GameObject[] enemigo = GameObject.FindGameObjectsWithTag("Enemigo");
+        objetivo = enemigo[0].transform;
+        for (int i = 0; i < enemigo.Length; i++)
+        {
+            if(Vector3.Distance(transform.position,enemigo[i].GetComponent<Transform>().position)<Vector3.Distance(transform.position, objetivo.position)){
+                objetivo = enemigo[i].transform;
+            }
         }
     }
-
     void Update()
     {     
     }
