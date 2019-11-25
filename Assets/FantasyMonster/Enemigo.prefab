@@ -1207,6 +1207,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 7897986227574919334, guid: 7d580a7d2ede0ef41be396236f650f4f, type: 3}
   agent: {fileID: 5570567569435765587}
+  vida_esqueleto: 0
 --- !u!195 &5570567569435765587
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1216,7 +1217,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 5570567569822803701}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.05
+  m_Radius: 0.03
   m_Speed: 1.5
   m_Acceleration: 8
   avoidancePriority: 50

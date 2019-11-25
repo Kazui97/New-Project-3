@@ -16,7 +16,7 @@ public class Torreta : MonoBehaviour
     {
         //enemigo = GameObject.FindGameObjectWithTag("Enemigo");
         posinicial = transform.position;
-        InvokeRepeating("Disparo", 0.1f, 0.1f);
+        InvokeRepeating("Disparo", 0.01f, 1f);
         Enemigoenlamira();
         
     }
