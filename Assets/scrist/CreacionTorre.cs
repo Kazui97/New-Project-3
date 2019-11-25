@@ -4,26 +4,34 @@ using UnityEngine;
 
 public class CreacionTorre : MonoBehaviour
 {
-   
+   GameObject base_;
+   public GameObject torre_1;
+   GameObject torretempo;
     void Start()
     {
         
     }
 
     void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+    {    if(Input.GetMouseButtonDown(0)){    
             RaycastHit hit;
-            if (Physics.Raycast(ray,out hit))
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray,out hit, Mathf.Infinity))
             {
-                agent.SetDestination(hit.point);
+               
+                  
+                base_ = hit.transform.gameObject;
+                torre(hit);
+                       
+                    
+                   
             }
         }
+        
     }
-    public void torre()
+    public void torre(RaycastHit hiss)
     {
-
+        torretempo = Instantiate(torre_1, hiss.transform.position , Quaternion.identity);
     }
 }
