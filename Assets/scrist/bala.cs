@@ -17,7 +17,7 @@ public class bala : MonoBehaviour
 
     public void OnCollisionEnter(Collision col)
     {
-       if (col.gameObject.GetComponent<Enemycontrole>() )
+       if (col.gameObject.GetComponent<EnemycontroleEsqueleto>() )
         {
             Destroy(this.gameObject);
         }
