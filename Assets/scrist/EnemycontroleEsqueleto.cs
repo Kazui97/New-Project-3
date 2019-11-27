@@ -16,7 +16,7 @@ public class EnemycontroleEsqueleto : MonoBehaviour
     void Start()
     {
         
-        agent.destination = (GameObject.Find("base").transform.position);
+        agent.destination = (GameObject.Find("villa").transform.position);
        // agent.SetDestination(GameObject.Find("base").transform.position);
        /* torre = GameObject.FindGameObjectWithTag("torre");
         posinicial = transform.position;
