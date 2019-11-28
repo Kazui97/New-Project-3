@@ -5,18 +5,18 @@ using UnityEngine.AI;
 
 public class EnemycontroleEsqueleto : MonoBehaviour
 {
-    public Camera cam;
+   // public Camera cam;
     public NavMeshAgent agent;
      float vida_esqueleto = 40;
 
-    GameObject torre;
-    Vector3 posinicial;
+    //GameObject torre;
+    //Vector3 posinicial;
 
 
     void Start()
     {
         
-        agent.destination = (GameObject.Find("villa").transform.position);
+        agent.destination = GameObject.Find("villa").transform.position;
        // agent.SetDestination(GameObject.Find("base").transform.position);
        /* torre = GameObject.FindGameObjectWithTag("torre");
         posinicial = transform.position;
