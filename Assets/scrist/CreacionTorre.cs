@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CreacionTorre : MonoBehaviour
 {
-   GameObject base_;
+  /* GameObject base_;
    public GameObject torre_1;
    GameObject torretempo;
     void Start()
@@ -37,5 +37,5 @@ public class CreacionTorre : MonoBehaviour
     public void torre(RaycastHit hiss)
     {
         torretempo = Instantiate(torre_1, hiss.transform.position , Quaternion.identity);
-    }
+    }*/
 }

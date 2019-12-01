@@ -7,6 +7,7 @@ public class Construirmanager : MonoBehaviour
     public static Construirmanager instance;
     private GameObject cañonconstruido;
     public GameObject cañonprefab;
+    public GameObject cañon2prefad;
     private void Awake()
     {
         if(instance != null)
@@ -16,17 +17,16 @@ public class Construirmanager : MonoBehaviour
         }
         instance = this;
     }
-    void Start()
-    {
-        cañonconstruido = cañonprefab;
-    }
-    public GameObject cañonparaconstruir()
+   
+    public GameObject Conseguircañonparaconstruir()
     {
         return cañonconstruido;
     }
-   
-    void Update()
+
+    public void Establecercañonparaconstruir(GameObject canon)
     {
-        
+        cañonconstruido = canon;
     }
+   
+    
 }

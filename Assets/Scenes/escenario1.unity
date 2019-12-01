@@ -29187,6 +29187,7 @@ GameObject:
   - component: {fileID: 1761371053}
   - component: {fileID: 1761371052}
   - component: {fileID: 1761371055}
+  - component: {fileID: 1761371056}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -29270,7 +29271,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d1d9f5c9b2174469d889023ef1b5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torre_1: {fileID: 405851659178638924, guid: 1465f7b40d280ff41931229f711757a1, type: 3}
+--- !u!114 &1761371056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761371051}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ad5af92153a464ba1a3d65c7434c1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camspeed: 30
+  bordepan: 30
+  scrollspeed: 98.39
+  miny: 150.98
+  maxy: 100
 --- !u!1001 &1764803117
 PrefabInstance:
   m_ObjectHideFlags: 0
