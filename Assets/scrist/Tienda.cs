@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tienda : MonoBehaviour
 {
     Construirmanager construirmanager;
+    public int oro;
 
     private void Start()
     {
@@ -21,6 +22,10 @@ public class Tienda : MonoBehaviour
     public void Comprarcañon2()
     {
         construirmanager.Establecercañonparaconstruir(construirmanager.cañon2prefad);
+    }
+    public void Comprarcaño3()
+    {
+        construirmanager.Establecercañonparaconstruir(construirmanager.cañon3prefad);
     }
     
 }

@@ -6,16 +6,18 @@ public class Torreta : MonoBehaviour
 {
     public GameObject bala;
     public GameObject canon;
+    int temp;
     GameObject lasbalas;
     public Transform objetivo;
+    public Transform objetivo2;
     public float vision;
-    Vector3 posinicial;
+   // Vector3 posinicial;
    
 
     void Start()
     {
         //enemigo = GameObject.FindGameObjectWithTag("Enemigo");
-        posinicial = transform.position;
+       // posinicial = transform.position;
         InvokeRepeating("Disparo", 0.01f, 1f);
         Enemigoenlamira();
         
@@ -32,8 +34,14 @@ public class Torreta : MonoBehaviour
     void Disparo()
     {
         transform.LookAt(objetivo);
+        transform.LookAt(objetivo2);
         if (Vector3.Distance(transform.position, objetivo.position)<=vision){
             Enemigoenlamira();
+            Lasbalas();
+        }
+        else if(Vector3.Distance(transform.position, objetivo2.position) <= vision)
+        {
+            Enemigo2enlamira();
             Lasbalas();
         }
        /* * Vector3 target = posinicial;
@@ -47,18 +55,42 @@ public class Torreta : MonoBehaviour
     }
     void Enemigoenlamira()
     {
-        GameObject[] enemigo = GameObject.FindGameObjectsWithTag("Enemigo");
-        objetivo = enemigo[0].transform;
-        for (int i = 0; i < enemigo.Length; i++)
+        temp = (int)Time.timeSinceLevelLoad;
+        if (temp >= 5)
         {
-            if(Vector3.Distance(transform.position,enemigo[i].GetComponent<Transform>().position)<Vector3.Distance(transform.position, objetivo.position)){
-                objetivo = enemigo[i].transform;
+            GameObject[] enemigo = GameObject.FindGameObjectsWithTag("Enemigo");
+            objetivo = enemigo[0].transform;
+            for (int i = 0; i < enemigo.Length; i++)
+            {
+                if (Vector3.Distance(transform.position, enemigo[i].GetComponent<Transform>().position) < Vector3.Distance(transform.position, objetivo.position))
+                {
+                    objetivo = enemigo[i].transform;
+                }
             }
         }
+        
+    }
+    void Enemigo2enlamira()
+    {
+        temp = (int)Time.timeSinceLevelLoad;
+        if (temp >= 11)
+        {
+            GameObject[] enemigo2 = GameObject.FindGameObjectsWithTag("Enemigo2");
+            objetivo2 = enemigo2[0].transform;
+            for (int i = 0; i < enemigo2.Length; i++)
+            {
+                if (Vector3.Distance(transform.position, enemigo2[i].GetComponent<Transform>().position) < Vector3.Distance(transform.position, objetivo2.position))
+                {
+                    objetivo2 = enemigo2[i].transform;
+                }
+            }
+        }
+       
     }
     void Update()
     {
-        Enemigoenlamira();     
+        Enemigoenlamira();
+        Enemigo2enlamira();
     }
     private void OnDrawGizmos()
     {

@@ -8,6 +8,7 @@ public class Construirmanager : MonoBehaviour
     private GameObject cañonconstruido;
     public GameObject cañonprefab;
     public GameObject cañon2prefad;
+    public GameObject cañon3prefad;
     private void Awake()
     {
         if(instance != null)

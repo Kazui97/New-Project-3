@@ -12,7 +12,7 @@ public class Enemy2 : MonoBehaviour
     void Start()
     {
        // CreacionEsqueletos();
-        InvokeRepeating("Creaciontrol", 1, 10);
+        InvokeRepeating("Creaciontrol", 10, 10);
     }
 
     void Creaciontrol()
