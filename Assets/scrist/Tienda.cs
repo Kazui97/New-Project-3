@@ -9,7 +9,7 @@ public class Tienda : MonoBehaviour
 
     private void Start()
     {
-        construirmanager = Construirmanager.instance;  //  adcedemos al scrit gracias a que es estatico
+        construirmanager = Construirmanager.instance;  //   scrit gracias a que es estatico
     }
 
 

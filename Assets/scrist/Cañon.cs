@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Torreta : MonoBehaviour
+public class Cañon : MonoBehaviour
 {
     public GameObject bala;
     public GameObject canon;
