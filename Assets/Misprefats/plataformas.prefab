@@ -288,4 +288,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b080aa2e4c7d9d45b9117c5b6afadba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prescolor: {r: 1, g: 0, b: 0, a: 0}
+  prescolor: {r: 0, g: 0.14966917, b: 1, a: 0}

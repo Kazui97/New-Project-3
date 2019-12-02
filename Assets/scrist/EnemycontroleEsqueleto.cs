@@ -6,8 +6,10 @@ using UnityEngine.AI;
 public class EnemycontroleEsqueleto : MonoBehaviour
 {
    // public Camera cam;
+   Construirmanager construirmanager;
     public NavMeshAgent agent;
      float vida_esqueleto = 40;
+     Animator animator; 
 
     //GameObject torre;
     //Vector3 posinicial;
@@ -15,26 +17,13 @@ public class EnemycontroleEsqueleto : MonoBehaviour
 
     void Start()
     {
-        
+        construirmanager = Construirmanager.instance;
         agent.destination = GameObject.Find("villa").transform.position;
-       // agent.SetDestination(GameObject.Find("base").transform.position);
-       /* torre = GameObject.FindGameObjectWithTag("torre");
-        posinicial = transform.position;
     }
 
-    void Update()
-    {
-        
-        if(Input.GetMouseButtonDown(0))
-        {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if (Physics.Raycast(ray,out hit))
-            {
-                agent.SetDestination(hit.point);
-            }
-        }
-    }*/
+   
+    void Update(){
+    
     }
      void OnCollisionEnter(Collision col)
     {
@@ -43,9 +32,12 @@ public class EnemycontroleEsqueleto : MonoBehaviour
             vida_esqueleto -=10;
             if(vida_esqueleto == 0)
             {
+                construirmanager.monedas += Random.Range(10,50);
                 Destroy(this.gameObject);
+                Debug.Log( construirmanager.monedas );
             }
            Debug.Log(vida_esqueleto);
         }
     }
 }
+

@@ -9,12 +9,13 @@ public class Plataformas : MonoBehaviour
     private Color starcolor;
     private GameObject caññon;
 
+
     Construirmanager construirmanager;
 
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        starcolor = rend.material.color;
+       rend = GetComponent<Renderer>();
+       starcolor = rend.material.color;
 
         construirmanager = Construirmanager.instance;
         
@@ -45,7 +46,7 @@ public class Plataformas : MonoBehaviour
     }
     private void OnMouseExit()
     {
-        rend.material.color = starcolor;
+       rend.material.color = starcolor;
     }
 
     void Update()
