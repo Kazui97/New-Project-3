@@ -24,7 +24,7 @@ public class Plataformas : MonoBehaviour
     private void OnMouseDown()
     {
         if (construirmanager.Conseguircañonparaconstruir() == null)
-        {
+        {   
             return;
         }
         if(caññon != null)
@@ -32,6 +32,7 @@ public class Plataformas : MonoBehaviour
             Debug.LogError("no puede contruir");
             return;
         }
+       
         GameObject cannontobuild =construirmanager.Conseguircañonparaconstruir();
         caññon = (GameObject)Instantiate(cannontobuild, transform.position, transform.rotation);
     }

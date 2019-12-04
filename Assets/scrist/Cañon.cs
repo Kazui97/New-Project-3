@@ -10,6 +10,7 @@ public class Cañon : MonoBehaviour
     GameObject lasbalas;
     public Transform objetivo;
     public Transform objetivo2;
+    public Transform objetivo3;
     public float vision;
    // Vector3 posinicial;
    
@@ -34,16 +35,29 @@ public class Cañon : MonoBehaviour
     void Disparo()
     {
         transform.LookAt(objetivo);
-        transform.LookAt(objetivo2);
+       // transform.LookAt(objetivo2);
         if (Vector3.Distance(transform.position, objetivo.position)<=vision){
             Enemigoenlamira();
             Lasbalas();
         }
-        else if(Vector3.Distance(transform.position, objetivo2.position) <= vision)
+       
+        float dist = Vector3.Distance(objetivo2.transform.position, transform.position);
+        if (dist < vision)
         {
+            transform.LookAt(objetivo2);
             Enemigo2enlamira();
             Lasbalas();
         }
+
+        float dists = Vector3.Distance(objetivo3.transform.position, transform.position);
+        if (dist < vision)
+        {
+            transform.LookAt(objetivo3);
+            Enemigo3enlamira();
+            Lasbalas();
+        }
+
+        return;
        /* * Vector3 target = posinicial;
         float dist = Vector3.Distance(enemigo.transform.position, transform.position);
         if (dist < vision)
@@ -87,10 +101,27 @@ public class Cañon : MonoBehaviour
         }
        
     }
+    void Enemigo3enlamira()
+    {
+        temp = (int)Time.timeSinceLevelLoad;
+        if (temp >= 31)
+        {
+            GameObject[] enemigo3 = GameObject.FindGameObjectsWithTag("Enemigo3");
+            objetivo3 = enemigo3[0].transform;
+            for (int i = 0; i < enemigo3.Length; i++)
+            {
+                if (Vector3.Distance(transform.position, enemigo3[i].GetComponent<Transform>().position) < Vector3.Distance(transform.position, objetivo2.position))
+                {
+                    objetivo2 = enemigo3[i].transform;
+                }
+            }
+        }
+    }
     void Update()
     {
         Enemigoenlamira();
         Enemigo2enlamira();
+        Enemigo3enlamira();
     }
     private void OnDrawGizmos()
     {

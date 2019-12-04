@@ -133,6 +133,7 @@ MonoBehaviour:
     type: 3}
   objetivo2: {fileID: 4257266388664756689, guid: fddd9c96fb8be3240943870ce1aa5f25,
     type: 3}
+  objetivo3: {fileID: 4408297863206454, guid: 6bbfea6690ef7724ba495c866081f855, type: 3}
   vision: 4.5
 --- !u!1 &136734
 GameObject:

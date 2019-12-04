@@ -22,6 +22,7 @@ public class Tienda : MonoBehaviour
             construirmanager.Establecercañonparaconstruir(construirmanager.cañonprefab);
             construirmanager.monedas -= 150;
             if (construirmanager.monedas <= 149){
+                Debug.Log("NO TIENE SUFICIENTE ORO");
                 
             }
             
@@ -35,6 +36,11 @@ public class Tienda : MonoBehaviour
         if (construirmanager.monedas >= 250){
             construirmanager.Establecercañonparaconstruir(construirmanager.cañon2prefad);
             construirmanager.monedas -= 250;
+            if (construirmanager.monedas <= 259)
+            {
+                Debug.Log("NO TIENE SUFICIENTE ORO");
+
+            }
         }
         
     }
@@ -43,6 +49,11 @@ public class Tienda : MonoBehaviour
         if (construirmanager.monedas >=350){
             construirmanager.Establecercañonparaconstruir(construirmanager.cañon3prefad);
             construirmanager.monedas -= 350;
+            if (construirmanager.monedas <= 349)
+            {
+                Debug.Log("NO TIENE SUFICIENTE ORO");
+
+            }
         }
         
     }

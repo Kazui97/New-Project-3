@@ -13,6 +13,7 @@ public class Construirmanager : MonoBehaviour
     public GameObject cañon2prefad;
     public GameObject cañon3prefad;
     public Text monedas_actules;
+    public bool alto = true;
 
     private void Awake()
     {
@@ -22,12 +23,11 @@ public class Construirmanager : MonoBehaviour
             return;
         }
         instance = this;
-        monedas = 200;
+        monedas = 300;
     }
    
     void Update(){
-        monedas_actules.text = "$ " + monedas;
-       
+        monedas_actules.text = "$ " + monedas; 
     }
 
 
@@ -39,6 +39,8 @@ public class Construirmanager : MonoBehaviour
     public void Establecercañonparaconstruir(GameObject canon)
     {
         cañonconstruido = canon;
+       
+       
     }
    
     

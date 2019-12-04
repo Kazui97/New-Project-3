@@ -10,7 +10,7 @@ public class EnemyControleTrol : MonoBehaviour
     void Start()
     {
         control.destination = GameObject.Find("villa").transform.position;
-        vida_trol = 60;
+        vida_trol = 50;
     }
     private void OnCollisionEnter(Collision pego)
     {

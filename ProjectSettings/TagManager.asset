@@ -8,6 +8,7 @@ TagManager:
   - Enemigo
   - villa
   - Enemigo2
+  - Enemigo3
   layers:
   - Default
   - TransparentFX
