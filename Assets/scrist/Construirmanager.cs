@@ -13,7 +13,9 @@ public class Construirmanager : MonoBehaviour
     public GameObject cañon2prefad;
     public GameObject cañon3prefad;
     public Text monedas_actules;
-    public bool alto = true;
+    public float tiempoMax = 180;
+    public Text contadortiempo;
+    public int tiempo;
 
     private void Awake()
     {
@@ -27,9 +29,21 @@ public class Construirmanager : MonoBehaviour
     }
    
     void Update(){
-        monedas_actules.text = "$ " + monedas; 
+        monedas_actules.text = "$ " + monedas;
+        Reloj();
     }
 
+    public void Reloj()
+    {
+        int minutos = 0;
+        int segundo = 0;
+        tiempoMax -= Time.deltaTime;
+        minutos = (int)tiempoMax / 60;
+        segundo = (int)tiempoMax % 60;
+        contadortiempo.text = minutos.ToString("00") + ":" + segundo.ToString("00");
+       // tiempo = (int)tiempoMax;
+        //contadortiempo.text = tiempo.ToString();
+    }
 
     public GameObject Conseguircañonparaconstruir()
     {

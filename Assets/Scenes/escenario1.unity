@@ -23670,7 +23670,9 @@ MonoBehaviour:
     type: 3}
   "ca\xF1on3prefad": {fileID: 116434, guid: 3a3cc95293df01741b392867d0340f4c, type: 3}
   monedas_actules: {fileID: 912894053}
-  alto: 1
+  tiempoMax: 250
+  contadortiempo: {fileID: 2061493053}
+  tiempo: 0
 --- !u!4 &1065434435
 Transform:
   m_ObjectHideFlags: 0
@@ -45927,7 +45929,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -45938,7 +45940,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &2061493054
 CanvasRenderer:
   m_ObjectHideFlags: 0
