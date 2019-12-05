@@ -38,27 +38,31 @@ public class Tienda : MonoBehaviour
     }
     public void Comprarcañon2()
     {  
-        if (construirmanager.monedas >= 250){
+        if (construirmanager.monedas >= 250 && construirmanager.canonselc == false){
             construirmanager.Establecercañonparaconstruir(construirmanager.cañon2prefad);
             construirmanager.monedas -= 250;
-            if (construirmanager.monedas <= 259)
-            {
-                Debug.Log("NO TIENE SUFICIENTE ORO");
+            construirmanager.Activarselec();
+            
+        }
+        else if (construirmanager.monedas <= 259)
+        {
+            Debug.Log("NO TIENE SUFICIENTE ORO");
 
-            }
         }
         
     }
     public void Comprarcaño3()
     {   
-        if (construirmanager.monedas >=350){
+        if (construirmanager.monedas >=350 && construirmanager.canonselc == false){
             construirmanager.Establecercañonparaconstruir(construirmanager.cañon3prefad);
             construirmanager.monedas -= 350;
-            if (construirmanager.monedas <= 349)
-            {
-                Debug.Log("NO TIENE SUFICIENTE ORO");
+            construirmanager.Activarselec();
+           
+        }
+        else if (construirmanager.monedas <= 349)
+        {
+            Debug.Log("NO TIENE SUFICIENTE ORO");
 
-            }
         }
         
     }
