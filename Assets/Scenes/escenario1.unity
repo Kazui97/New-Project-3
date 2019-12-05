@@ -23670,7 +23670,7 @@ MonoBehaviour:
     type: 3}
   "ca\xF1on3prefad": {fileID: 116434, guid: 3a3cc95293df01741b392867d0340f4c, type: 3}
   monedas_actules: {fileID: 912894053}
-  tiempoMax: 250
+  tiempoMax: 300
   contadortiempo: {fileID: 2061493053}
   tiempo: 0
   canonselc: 0
