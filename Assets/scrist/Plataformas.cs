@@ -31,17 +31,23 @@ public class Plataformas : MonoBehaviour
         {
             Debug.LogError("no puede contruir");
             return;
+           
         }
        
-        GameObject cannontobuild =construirmanager.Conseguircañonparaconstruir();
-        caññon = (GameObject)Instantiate(cannontobuild, transform.position, transform.rotation);
+            GameObject cannontobuild =construirmanager.Conseguircañonparaconstruir();
+            caññon = (GameObject)Instantiate(cannontobuild, transform.position, transform.rotation);
+            construirmanager.Desactivarselec();
+            construirmanager.Establecercañonparaconstruir(null);
+       
+       
     }
 
     private void OnMouseEnter()
     {
         if (construirmanager.Conseguircañonparaconstruir() == null)
         {
-            return;
+          return;
+  
         }
         rend.material.color = prescolor;
     }

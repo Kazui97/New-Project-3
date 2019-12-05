@@ -16,6 +16,7 @@ public class Construirmanager : MonoBehaviour
     public float tiempoMax = 180;
     public Text contadortiempo;
     public int tiempo;
+    public bool canonselc = false;
 
     private void Awake()
     {
@@ -55,6 +56,15 @@ public class Construirmanager : MonoBehaviour
         cañonconstruido = canon;
        
        
+    }
+
+    public void Activarselec()
+    {
+        canonselc = true;
+    }
+    public void Desactivarselec()
+    {
+        canonselc = false;
     }
    
     

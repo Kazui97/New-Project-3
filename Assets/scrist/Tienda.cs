@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tienda : MonoBehaviour
 {
     Construirmanager construirmanager;
+    bool puedeconstruir = true;
    
     
 
@@ -17,19 +18,23 @@ public class Tienda : MonoBehaviour
 
 
     public void Comprarcañon()          // no se como explicar :|  /// aqui adcedemos al prefad seleccionado para porder adceder a el desde los botones 
-    {
-        if (construirmanager.monedas >= 150){
-            construirmanager.Establecercañonparaconstruir(construirmanager.cañonprefab);
-            construirmanager.monedas -= 150;
-            if (construirmanager.monedas <= 149){
+    {   
+
+            if (construirmanager.monedas >= 150 && construirmanager.canonselc == false)
+            {
+                construirmanager.Establecercañonparaconstruir(construirmanager.cañonprefab);
+                construirmanager.monedas -= 150;
+                construirmanager.Activarselec();
+            
+            
+            }
+            
+            else if (construirmanager.monedas <= 149)
+            {
                 Debug.Log("NO TIENE SUFICIENTE ORO");
                 
             }
-            
-                
-            
-        }
-       
+ 
     }
     public void Comprarcañon2()
     {  
