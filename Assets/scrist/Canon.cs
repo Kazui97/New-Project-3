@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cañon : MonoBehaviour
+public class Canon : MonoBehaviour
 {
     public GameObject bala;
     public GameObject canon;
@@ -57,7 +57,7 @@ public class Cañon : MonoBehaviour
             Lasbalas();
         }
 
-        return;
+        //return;
        /* * Vector3 target = posinicial;
         float dist = Vector3.Distance(enemigo.transform.position, transform.position);
         if (dist < vision)

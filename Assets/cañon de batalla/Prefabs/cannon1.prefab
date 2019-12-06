@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 405851659178871262}
   - component: {fileID: 405851659179782512}
   - component: {fileID: 405851659181106766}
-  - component: {fileID: 405851661153295584}
+  - component: {fileID: 9028903225397999038}
   m_Layer: 0
   m_Name: cannon_small_upgrade_01
   m_TagString: Untagged
@@ -266,7 +266,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &405851661153295584
+--- !u!114 &9028903225397999038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 405851659178671878}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9b06e729bfdcf642ab5cfddd3610117, type: 3}
+  m_Script: {fileID: 11500000, guid: 7549a8c235b9293408b0307f6950b442, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bala: {fileID: 2152597939117501174, guid: ca1ed6e94fc108a42a32aea844b77b23, type: 3}
