@@ -12,6 +12,8 @@ public class Cañon3 : MonoBehaviour
     public Transform objetivo2;
     public Transform objetivo3;
     public float vision;
+    public AudioClip sonidocanon;
+    AudioSource sonido;
 
 
 
@@ -19,6 +21,7 @@ public class Cañon3 : MonoBehaviour
     {
         InvokeRepeating("Disparo", 0.01f, 0.2f);
         Enemigoenlamira();
+        sonido = GetComponent<AudioSource>();
     }
     void Lasbalas()
     {
@@ -26,6 +29,7 @@ public class Cañon3 : MonoBehaviour
         lasbalas.transform.parent = null;
         lasbalas.GetComponent<bala>().direccion = transform.forward;
         lasbalas.name = "balasprueba";
+        sonido.PlayOneShot(sonidocanon);
         Destroy(lasbalas, 1.5f);
     }
 

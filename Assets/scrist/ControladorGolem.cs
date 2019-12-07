@@ -13,6 +13,8 @@ public class ControladorGolem : MonoBehaviour
     float vida_golem;
     public Image hpgolem;
     Animator animator;
+    public AudioClip golpe;
+    AudioSource golpesonido;
 
     //GameObject torre;
     //Vector3 posinicial;
@@ -20,6 +22,7 @@ public class ControladorGolem : MonoBehaviour
 
     void Start()
     {
+        golpesonido = GetComponent<AudioSource>();
         construirmanager = Construirmanager.instance;
         agent.destination = GameObject.Find("villa").transform.position;
         vida_golem = vida_max;
@@ -38,7 +41,8 @@ public class ControladorGolem : MonoBehaviour
     {
         if (col.gameObject.GetComponent<bala>())
         {
-            vida_golem -= 10;
+            vida_golem -= Random.Range(10,15);
+            golpesonido.PlayOneShot(golpe);
             if (vida_golem == 0)
             {
                 construirmanager.monedas += Random.Range(50, 100);

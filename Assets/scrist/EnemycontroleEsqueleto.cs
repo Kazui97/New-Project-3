@@ -12,6 +12,8 @@ public class EnemycontroleEsqueleto : MonoBehaviour
     float vida_max = 40;
      float vida_esqueleto;
     public Image vida_imagen;
+    public AudioClip golpe;
+    AudioSource sonidogolpe;
     // Animator animator;
 
     //GameObject torre;
@@ -22,7 +24,8 @@ public class EnemycontroleEsqueleto : MonoBehaviour
        // animator = GetComponent<Animator>();
     }
     void Start()
-    {  
+    {
+        sonidogolpe = GetComponent<AudioSource>();
         construirmanager = Construirmanager.instance;
         agent.destination = GameObject.Find("villa").transform.position;
         vida_esqueleto = vida_max;
@@ -43,6 +46,7 @@ public class EnemycontroleEsqueleto : MonoBehaviour
         if (col.gameObject.GetComponent<bala>())
         {
             vida_esqueleto -=10;
+            sonidogolpe.PlayOneShot(golpe);
             if(vida_esqueleto == 0)
             {
                 construirmanager.monedas += Random.Range(10,50);

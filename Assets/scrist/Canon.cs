@@ -12,6 +12,8 @@ public class Canon : MonoBehaviour
     public Transform objetivo2;
     public Transform objetivo3;
     public float vision;
+    public AudioClip sonidocanon;
+    AudioSource sonido;
    // Vector3 posinicial;
    
 
@@ -21,6 +23,7 @@ public class Canon : MonoBehaviour
        // posinicial = transform.position;
         InvokeRepeating("Disparo", 0.01f, 1f);
         Enemigoenlamira();
+        sonido = GetComponent<AudioSource>();
         
     }
     void Lasbalas()
@@ -29,6 +32,7 @@ public class Canon : MonoBehaviour
         lasbalas.transform.parent = null;
         lasbalas.GetComponent<bala>().direccion = transform.forward;
         lasbalas.name = "balasprueba";
+        sonido.PlayOneShot(sonidocanon);
         Destroy(lasbalas,1.5f);
     }
 

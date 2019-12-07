@@ -11,8 +11,11 @@ public class EnemyControleTrol : MonoBehaviour
     public float vida_max = 50;
      float vida_trol;
     public Image hptroll;
+    public AudioClip golpe;
+    AudioSource golpesonido;
     void Start()
     {
+        golpesonido = GetComponent<AudioSource>();
         construirmanager = Construirmanager.instance;
         control.destination = GameObject.Find("villa").transform.position;
         vida_trol = vida_max;
@@ -28,7 +31,8 @@ public class EnemyControleTrol : MonoBehaviour
     {
         if(pego.gameObject.GetComponent<bala>())
         {
-            vida_trol -= 5;
+            vida_trol -= Random.Range(5,15);
+            golpesonido.PlayOneShot(golpe);
             if(vida_trol == 0)
             {
                 construirmanager.monedas += Random.Range(30, 70);

@@ -44,6 +44,11 @@ public class Construirmanager : MonoBehaviour
         contadortiempo.text = minutos.ToString("00") + ":" + segundo.ToString("00");
        // tiempo = (int)tiempoMax;
         //contadortiempo.text = tiempo.ToString();
+
+        if (minutos == 00 && segundo == 00)
+        {
+            Debug.Log("gg");
+        }
     }
 
     public GameObject Conseguircañonparaconstruir()
