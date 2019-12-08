@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Construirmanager : MonoBehaviour
@@ -45,8 +46,9 @@ public class Construirmanager : MonoBehaviour
        // tiempo = (int)tiempoMax;
         //contadortiempo.text = tiempo.ToString();
 
-        if (minutos == 00 && segundo == 00)
+        if (minutos == 0 && segundo == 0)
         {
+            SceneManager.LoadScene("gane");
             Debug.Log("gg");
         }
     }
