@@ -46,7 +46,7 @@ public class Canon : MonoBehaviour
         }
        
         float dist = Vector3.Distance(objetivo2.transform.position, transform.position);
-        if (dist < vision)
+        if (dist <= vision)
         {
             transform.LookAt(objetivo2);
             Enemigo2enlamira();
@@ -54,7 +54,7 @@ public class Canon : MonoBehaviour
         }
 
         float dists = Vector3.Distance(objetivo3.transform.position, transform.position);
-        if (dist < vision)
+        if (dist <= vision)
         {
             transform.LookAt(objetivo3);
             Enemigo3enlamira();
