@@ -46,9 +46,9 @@ public class Construirmanager : MonoBehaviour
        // tiempo = (int)tiempoMax;
         //contadortiempo.text = tiempo.ToString();
 
-        if (minutos == 0 && segundo == 0)
+        if (minutos <= 0 && segundo <= 0)
         {
-            SceneManager.LoadScene("gane");
+            Escenagane();
             Debug.Log("gg");
         }
     }
@@ -56,6 +56,10 @@ public class Construirmanager : MonoBehaviour
     public GameObject Conseguircañonparaconstruir()
     {
         return cañonconstruido;
+    }
+    void Escenagane()
+    {
+        SceneManager.LoadScene("gane");
     }
 
     public void Establecercañonparaconstruir(GameObject canon)

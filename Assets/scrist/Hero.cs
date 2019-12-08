@@ -10,9 +10,9 @@ public class Hero : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision col)
     {
-        if (other.GetComponent<EnemyControleTrol>())
+        if (col.gameObject.GetComponent<EnemyControleTrol>())
         {
             Debug.Log("trol lleguo");
         }

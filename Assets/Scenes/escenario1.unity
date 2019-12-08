@@ -4904,7 +4904,7 @@ GameObject:
   m_Layer: 0
   m_Name: villa
   m_TagString: villa
-  m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 7422848464349959988, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -9464,12 +9464,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417349084}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.5242117
-  m_Height: 2.7811742
+  m_Radius: 0.8374618
+  m_Height: 3.0357745
   m_Direction: 1
-  m_Center: {x: 0, y: 1.4322692, z: 0.02959205}
+  m_Center: {x: -0.06378925, y: 1.5595694, z: 0.1486477}
 --- !u!114 &417349088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9482,6 +9482,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66f9678bc792e8499a8312a0c84674e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &417349089
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417349084}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &418764969
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24333,7 +24349,7 @@ MonoBehaviour:
     type: 3}
   "ca\xF1on3prefad": {fileID: 116434, guid: 3a3cc95293df01741b392867d0340f4c, type: 3}
   monedas_actules: {fileID: 912894053}
-  tiempoMax: 5
+  tiempoMax: 300
   contadortiempo: {fileID: 2061493053}
   tiempo: 0
   canonselc: 0
@@ -43229,7 +43245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 456938, guid: ec948f8e0c2ff154f8d8ab7b12efce49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.007
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 456938, guid: ec948f8e0c2ff154f8d8ab7b12efce49, type: 3}
       propertyPath: m_LocalPosition.z
@@ -43279,6 +43295,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.27
       objectReference: {fileID: 0}
+    - target: {fileID: 9516330, guid: ec948f8e0c2ff154f8d8ab7b12efce49, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5908af198b4b1724e8c48eccbce4f976, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec948f8e0c2ff154f8d8ab7b12efce49, type: 3}
 --- !u!4 &1915176989 stripped
