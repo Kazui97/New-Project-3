@@ -25,6 +25,9 @@ public class bala : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        if(col.gameObject.GetComponent<ControladorGolem>()){
+            Destroy(this.gameObject);
+        }
     }
     void Update()
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tienda : MonoBehaviour
 {
     Construirmanager construirmanager;
-    bool puedeconstruir = true;
+//    bool puedeconstruir = true;
    
     
 

@@ -1193,8 +1193,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.09560652, y: 0.09412382, z: 0.034231283}
-  m_Center: {x: -0.0032131658, y: 0.1050048, z: 0.004853201}
+  m_Size: {x: 0.09560653, y: 0.15168102, z: 0.04616107}
+  m_Center: {x: -0.0032131677, y: 0.076225966, z: 0.004939088}
 --- !u!114 &5570567569435765586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1683,6 +1683,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6264740520511272417, guid: 9ff1f29b0d973d54789a6ad00a4dacfe,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ff1f29b0d973d54789a6ad00a4dacfe, type: 3}
